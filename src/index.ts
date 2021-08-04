@@ -33,7 +33,7 @@ export default class KissDate {
   }
 
   get jsDate(): Date {
-    return new Date(this.dateArr[0] * Time.Millisecond);
+    return new Date(this.dateArr[0] / Time.Millisecond);
   }
 
   changeTimezone(timezone: Timezone | string, adjustTime = true): KissDate {
