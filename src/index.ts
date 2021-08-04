@@ -36,6 +36,10 @@ export default class KissDate {
     return new Date(this.dateArr[0] / Time.Millisecond);
   }
 
+  get localShiftedJsDate(): Date {
+    return new Date((this.dateArr[0] + this.timezone) / Time.Millisecond);
+  }
+
   changeTimezone(timezone: Timezone | string, adjustTime = true): KissDate {
     const kissDateTimezone =
       typeof timezone === 'string'
