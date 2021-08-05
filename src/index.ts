@@ -46,7 +46,9 @@ export default class KissDate {
         ? KissDate.getTimezone(timezone)
         : timezone ?? null;
     this.dateArr[1] = kissDateTimezone;
-    if (!adjustTime) this.dateArr[0] += kissDateTimezone;
+    if (!adjustTime) {
+      this.dateArr[0] = this.dateArr[0] + this.timezone - kissDateTimezone;
+    }
     return this;
   }
 
