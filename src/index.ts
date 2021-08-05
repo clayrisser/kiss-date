@@ -45,10 +45,10 @@ export default class KissDate {
       typeof timezone === 'string'
         ? KissDate.getTimezone(timezone)
         : timezone ?? null;
-    this.dateArr[1] = kissDateTimezone;
     if (!adjustTime) {
       this.dateArr[0] = this.dateArr[0] + this.timezone - kissDateTimezone;
     }
+    this.dateArr[1] = kissDateTimezone;
     return this;
   }
 
