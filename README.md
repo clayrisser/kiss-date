@@ -4,6 +4,8 @@
 
 > keep it simple stupid date library
 
+![](assets/kiss-date.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 I created kiss-date to provide a simple way to manipulate dates and timezones using simple math. The date is
